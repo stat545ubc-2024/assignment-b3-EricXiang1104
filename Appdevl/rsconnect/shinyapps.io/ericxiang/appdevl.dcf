@@ -1,0 +1,12 @@
+name: appdevl
+title: Appdevl
+username: ericxiang
+account: ericxiang
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 13363797
+bundleId: 9376135
+url: https://ericxiang.shinyapps.io/appdevl/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE

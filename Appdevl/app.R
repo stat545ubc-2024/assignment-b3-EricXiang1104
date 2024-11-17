@@ -1,6 +1,12 @@
 
 # Assignment B3. Crea ting a Shiny App
+#Eric Xiang
+#2024 11.21
+#The goal of this app is to plot histogram for the mean variables in the cancer_sample dataset, 
+#It will also filter out the variable it is plotting and then rearrange the dataset based on the variable of interest.
+#It utilizes the cancer_data from the datateachr package
 #install.packages("colourpicker")#install if needed
+#install.packages('rsconnect')
 
 library(shiny)
 library(tidyverse)
@@ -8,18 +14,22 @@ library(datateachr)
 library(dplyr)
 library(colourpicker)
 
+library(rsconnect)
+#publish the web
+#rsconnect::deployApp("C:/Users/Eric Xiang/Desktop/assignment-b3-EricXiang1104/Appdevl")
+data("cancer_sample")#cancer_sample from the dataset is used for the web development
 
-data("cancer_sample")#cancer_sample from the dataset is used for the web development 
 
 # Define UI for application 
 ui <- fluidPage(
-  titlePanel("Cancer Sample  Data"),
+  titlePanel("Cancer Sample  Mean Data"),
   checkboxInput("variableSort","sort by variable",TRUE),
   colourInput("col", "Select colour", "purple"),
   sidebarLayout(
     sidebarPanel(
     selectInput("variableInput","Variable",
-               choices=c("radius_mean","texture_mean","perimeter_mean"),
+               choices=c("radius_mean","texture_mean","perimeter_mean","smoothness_mean","compactness_mean
+","concavity_mean"),
                selected="radius_mean"),
     downloadButton("downloadData", "Download Table as CSV")),
     mainPanel(img(src='cancer.jpg',align = "centre",height='400px',width='400px'),plotOutput("coolplot"),strong(textOutput("numRows")),tableOutput("results")
@@ -65,4 +75,7 @@ server <- function(input, output,session) {
 
 # Run the application 
 shinyApp(ui = ui, server = server)
+
+
+
       
