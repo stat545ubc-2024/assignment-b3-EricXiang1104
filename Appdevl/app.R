@@ -28,8 +28,7 @@ ui <- fluidPage(
   sidebarLayout(
     sidebarPanel(
     selectInput("variableInput","Variable",
-               choices=c("radius_mean","texture_mean","perimeter_mean","smoothness_mean","compactness_mean
-","concavity_mean"),
+               choices=c("radius_mean","texture_mean","perimeter_mean","smoothness_mean","compactness_mean","concavity_mean"),
                selected="radius_mean"),
     downloadButton("downloadData", "Download Table as CSV")),
     mainPanel(img(src='cancer.jpg',align = "centre",height='400px',width='400px'),plotOutput("coolplot"),strong(textOutput("numRows")),tableOutput("results")
