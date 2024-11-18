@@ -1,0 +1,12 @@
+name: CancerSampleMeanData2
+title: CancerSampleMeanData2
+username: ericxiang
+account: ericxiang
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 13366834
+bundleId: 9377423
+url: https://ericxiang.shinyapps.io/CancerSampleMeanData2/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
