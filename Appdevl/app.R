@@ -46,7 +46,7 @@ server <- function(input, output,session) {
     if (input$variableSort){
       new_data<-new_data %>% arrange(!!sym(input$variableInput))}
     return(new_data) })
-#To draw a histogram 
+#To draw a histogram for the selected variable 
   output$coolplot <- renderPlot({
     ggplot(cancer_sample, aes_string(input$variableInput)) +
       geom_histogram(bins = 30 , fill=input$col)+
