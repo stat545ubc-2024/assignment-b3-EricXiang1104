@@ -6,13 +6,14 @@
 #It will also filter out the variable it is plotting and then rearrange the dataset based on the variable of interest.
 #It utilizes the cancer_data from the datateachr package
 #install.packages("colourpicker")#install if needed
-#install.packages('rsconnect')
+#install.packages('rsconnect')#install if needed 
 
 library(shiny)
 library(tidyverse)
 library(datateachr) 
 library(dplyr)
 library(colourpicker)
+
 
 library(rsconnect)
 #publish the web
@@ -48,7 +49,7 @@ server <- function(input, output,session) {
 #To draw a histogram 
   output$coolplot <- renderPlot({
     ggplot(cancer_sample, aes_string(input$variableInput)) +
-      geom_histogram(binwidth = 1, fill=input$col)+
+      geom_histogram(bins = 30 , fill=input$col)+
       labs(title=paste("Histogram of",input$variableInput),x=input$variableInput,y="Count")
 
   })
