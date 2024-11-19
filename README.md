@@ -4,4 +4,4 @@ This assignment is creating a web using shiny app. The goal of this app is to pl
 
 The data cancer_sample is from datateachr package, an open source data for education purpose.This cancer_data contains a sample of quantitative features that were calculated from images of nuclei present in fine needle aspiration biopsies of breast masses from patients at the University of Wisconsin Hospital. For this assignment, I am focusing on the mean data.
 
-**Link to the running app:** [https://ericxiang.shinyapps.io/CancerSampleMeanData3/](https://ericxiang.shinyapps.io/CancerSampleMeanData2/){.uri}
+**Link to the running app:** <https://ericxiang.shinyapps.io/CancerSAmpleMeanData3/>
